@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int x, y, z;
+	printf("Enter the range (start end) ");
+	scanf("%d%d", &x, &y);
+	if (x>y)
+	{
+	    z=x;
+	    x=y;
+	    y=z;
+	}
+	for(int i=x;i<=y;i++)
+	{
+		printf("Square root of %d is %f\n", i, sqrt(i));
+}
+return 0;
+}

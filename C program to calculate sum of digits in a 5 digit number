@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    if(n<10000||n>99999)
+    return 1;
+    int first, second, third, fourth, fifth;
+    fifth=n/10000;
+    n=n-fifth*10000;
+    fourth=n/1000;
+    n=n-fourth*1000;
+    third=n/100;
+    n=n-third*100;
+    second=n/10;
+    n=n-second*10;
+    first=n;
+    int sum=first+second+third+fourth+fifth;
+    printf("%d", sum);
+    
+}

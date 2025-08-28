@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    int x[100], y[100];
+    int n, z, w;
+    printf("Enter the size of the array ");
+    scanf("%d", &n);
+    printf("Enter the elements ");
+    for(int i=0;i<n;i++)
+        scanf("%d", &x[i]);
+    printf("Enter the element to be added ");
+    scanf("%d", &z);
+    printf("Enter position to add it ");
+    scanf("%d", &w);
+    if(w>n){
+        printf("Position should be between 1 and %d", n);
+        return 1;
+    }
+    for(int d=0;d<w-1;d++){
+        y[d]=x[d];
+    }
+    y[w-1]=z;
+    for(int k=w;k<n+1;k++)
+    {
+        y[k]=x[k-1];
+    }
+    for(int l=0;l<=n;l++){
+        printf("%d ", y[l]);
+    }
+    return 0;
+}

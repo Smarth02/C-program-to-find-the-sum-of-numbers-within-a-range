@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+    printf("Enter the size of the array ");
+    int n, position;
+    scanf("%d", &n);
+    int x[100];
+    printf("Enter the elements of the array ");
+    for(int i=0;i<n;i++)
+        scanf("%d", &x[i]);
+    printf("Enter the position of the element to be deleted ");
+    scanf("%d", &position);
+    if(position<=0||position>n)
+    {
+        printf("Invalid position");
+        return 1;
+    }
+    for(int j=position-1;j<n;j++){
+        x[j]=x[j+1];
+    }
+    for(int k=0;k<n-1;k++)
+        printf("%d ", x[k]);
+    return 0;
+}
